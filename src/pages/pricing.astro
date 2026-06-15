@@ -1,0 +1,210 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Pricing — SnapInspect AI"
+  description="SnapInspect Pro is $99.99 per month with a 14-day free trial. Unlimited inspections, AI Polish, AI client summaries, branded PDF reports."
+  ogPath="/pricing"
+>
+  <!-- ─────────────────────────────────────────── HERO ─── -->
+  <section class="border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial pt-16 pb-20 md:pt-24 md:pb-24">
+      <div class="flex items-center justify-between mb-16 reveal reveal-1">
+        <span class="label">№ 005 — Pricing</span>
+        <span class="label">Current rates</span>
+      </div>
+
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">SECTION</p>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <h1 class="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.95] reveal reveal-2">
+            One plan.<br/>
+            <em class="text-[var(--color-rust)]">No tiers.</em><br/>
+            No surprises.
+          </h1>
+          <p class="mt-10 text-xl text-[var(--color-ink-soft)] leading-relaxed max-w-2xl reveal reveal-3">
+            We don't believe in feature-gating tools the working inspector needs. Everything is included for one monthly rate, and the first two weeks are free.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── PLAN CARD ─── -->
+  <section class="py-24 md:py-32 border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-8 md:col-start-3">
+          <div class="border border-[var(--color-ink)] bg-[var(--color-paper)]">
+            <!-- Banner -->
+            <div class="bg-[var(--color-ink)] text-[var(--color-paper-soft)] px-8 py-3 flex items-center justify-between">
+              <p class="label text-[var(--color-paper-soft)]">SNAPINSPECT PRO</p>
+              <p class="label text-[var(--color-paper-soft)]">14 DAYS FREE</p>
+            </div>
+
+            <div class="p-8 md:p-12">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="font-display text-3xl italic">Monthly</p>
+                <p class="chapter-mark">USD</p>
+              </div>
+              <p class="text-sm text-[var(--color-gray)] mb-10">For the working inspector.</p>
+
+              <div class="flex items-baseline gap-2 mb-3">
+                <span class="font-display text-[9rem] leading-none">$99</span>
+                <span class="font-display text-5xl text-[var(--color-gray)]">.99</span>
+                <span class="text-base text-[var(--color-gray)] ml-3">/ month</span>
+              </div>
+              <p class="label mb-10">14-day free trial · then auto-renews monthly · cancel any time</p>
+
+              <a href="https://apps.apple.com" class="btn-primary w-full justify-center text-base py-4">
+                Start your free trial on the App Store
+              </a>
+
+              <div class="my-12 rule"></div>
+
+              <p class="label mb-6">WHAT'S INCLUDED — EVERY PLAN, EVERY MONTH</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-[15px]">
+                {[
+                  "Unlimited inspections",
+                  "AI Polish on every finding",
+                  "AI client summary (green/yellow/red)",
+                  "Branded PDF reports",
+                  "23 inspection categories",
+                  "Voice dictation",
+                  "Comment library (70+)",
+                  "Photo capture + annotation",
+                  "Severity tagging",
+                  "Custom branding",
+                  "Scope of inspection page",
+                  "iOS share sheet integration",
+                ].map((item) => (
+                  <div class="flex items-start gap-3">
+                    <svg viewBox="0 0 16 16" class="w-4 h-4 mt-1 flex-shrink-0 text-[var(--color-rust)]" fill="none" stroke="currentColor" stroke-width="1.75">
+                      <path d="M3 8.5l3.5 3.5L13 4.5"/>
+                    </svg>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── SUBSCRIPTION DETAILS ─── -->
+  <section class="py-24 border-b border-[var(--color-line-soft)] bg-[var(--color-paper-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark mb-6">№ 006 — The Fine Print</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 md:col-start-5">
+          <h2 class="font-display text-4xl md:text-5xl leading-[1] mb-10">
+            How the subscription works.
+          </h2>
+          <div class="space-y-8 text-[15px] text-[var(--color-ink-soft)] leading-relaxed">
+            <div class="border-t border-[var(--color-line)] pt-6">
+              <p class="font-medium text-[var(--color-ink)] mb-2">14-day free trial</p>
+              <p>New subscribers receive 14 days of full access at no charge. You will not be billed during the trial. If you cancel before the trial ends, you will not be charged anything.</p>
+            </div>
+            <div class="border-t border-[var(--color-line)] pt-6">
+              <p class="font-medium text-[var(--color-ink)] mb-2">Auto-renewal</p>
+              <p>After the trial, the subscription renews automatically at $99.99 per month unless cancelled at least 24 hours before the end of the current period.</p>
+            </div>
+            <div class="border-t border-[var(--color-line)] pt-6">
+              <p class="font-medium text-[var(--color-ink)] mb-2">How to cancel</p>
+              <p>Open the iPhone Settings app → tap your name → Subscriptions → SnapInspect AI → Cancel Subscription. You retain access through the end of the period you've already paid for.</p>
+            </div>
+            <div class="border-t border-[var(--color-line)] pt-6">
+              <p class="font-medium text-[var(--color-ink)] mb-2">Billing</p>
+              <p>All billing is handled by Apple through the App Store. We never receive your payment information. Refund requests are handled through <a href="https://support.apple.com/en-us/HT204084" class="underline decoration-1 underline-offset-4 hover:text-[var(--color-rust)]">Apple's refund process</a>.</p>
+            </div>
+            <div class="border-t border-[var(--color-line)] pt-6">
+              <p class="font-medium text-[var(--color-ink)] mb-2">Restoring on a new device</p>
+              <p>If you reinstall the app or switch iPhones, sign in with the same Apple ID you used to subscribe, then open Settings inside the app and tap "Restore Purchases."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── COMPARISON ─── -->
+  <section class="py-24 md:py-28 border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8 mb-12">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark mb-6">№ 007 — For Reference</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 md:col-start-5">
+          <h2 class="font-display text-4xl md:text-5xl leading-[1] mb-2">
+            How we compare.
+          </h2>
+          <p class="text-base text-[var(--color-gray)]">Published rates as of 2026. Subject to change.</p>
+        </div>
+      </div>
+
+      <div class="border border-[var(--color-line)] bg-[var(--color-paper)]">
+        <table class="w-full text-sm">
+          <thead class="border-b border-[var(--color-ink)]">
+            <tr>
+              <th class="text-left p-6 label">Software</th>
+              <th class="text-right p-6 label">Monthly</th>
+              <th class="text-right p-6 label hidden md:table-cell">Free Trial</th>
+              <th class="text-right p-6 label hidden md:table-cell">Reports</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-[var(--color-line-soft)] bg-[var(--color-paper-soft)]">
+              <td class="p-6">
+                <p class="font-display text-xl italic">SnapInspect AI</p>
+                <p class="text-xs text-[var(--color-gray)] mt-1">AI-powered, iPhone-native</p>
+              </td>
+              <td class="p-6 text-right font-display text-2xl">$99.99</td>
+              <td class="p-6 text-right hidden md:table-cell">14 days</td>
+              <td class="p-6 text-right hidden md:table-cell">Unlimited</td>
+            </tr>
+            <tr class="border-b border-[var(--color-line-soft)]">
+              <td class="p-6">
+                <p class="font-display text-xl text-[var(--color-gray)]">Spectora</p>
+                <p class="text-xs text-[var(--color-gray)] mt-1">Web + mobile</p>
+              </td>
+              <td class="p-6 text-right text-[var(--color-gray)]">$109.00</td>
+              <td class="p-6 text-right text-[var(--color-gray)] hidden md:table-cell">2 inspections</td>
+              <td class="p-6 text-right text-[var(--color-gray)] hidden md:table-cell">Unlimited</td>
+            </tr>
+            <tr>
+              <td class="p-6">
+                <p class="font-display text-xl text-[var(--color-gray)]">Tap Inspect</p>
+                <p class="text-xs text-[var(--color-gray)] mt-1">Unlimited plan</p>
+              </td>
+              <td class="p-6 text-right text-[var(--color-gray)]">$90.00</td>
+              <td class="p-6 text-right text-[var(--color-gray)] hidden md:table-cell">5 reports</td>
+              <td class="p-6 text-right text-[var(--color-gray)] hidden md:table-cell">Unlimited</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── CTA ─── -->
+  <section class="py-32">
+    <div class="container-editorial text-center">
+      <p class="chapter-mark mb-8">— FIN —</p>
+      <h2 class="font-display text-5xl md:text-7xl leading-[0.95] max-w-3xl mx-auto mb-12">
+        Fourteen days.<br/>
+        <em class="text-[var(--color-navy)]">No card charged.</em>
+      </h2>
+      <a href="https://apps.apple.com" class="btn-primary text-base px-8 py-4">
+        Start your free trial
+      </a>
+      <p class="mt-8 label">Cancel any time in the App Store</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+@theme {
+  /* Editorial color system — warm ivory paper with authoritative navy and a single rust accent */
+  --color-paper: #F4EFE3;
+  --color-paper-deep: #E8E0CC;
+  --color-paper-soft: #FAF6EC;
+  --color-ink: #11151A;
+  --color-ink-soft: #2A3038;
+  --color-navy: #0F3A60;
+  --color-navy-deep: #082140;
+  --color-navy-bright: #1B6CA8;
+  --color-rust: #B85332;
+  --color-rust-soft: #C97350;
+  --color-gray: #6F6A5E;
+  --color-line: #C5BCA8;
+  --color-line-soft: #D8D0BD;
+
+  /* Typography */
+  --font-serif: "Instrument Serif", "Times New Roman", serif;
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Base spacing for editorial rhythm */
+  --spacing-section: 7rem;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  /* Editorial serif for display moments */
+  .font-display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 0.95;
+  }
+
+  /* Technical labels in margins, eyebrows, captions */
+  .font-mono {
+    font-family: var(--font-mono);
+    font-feature-settings: "ss01";
+  }
+
+  ::selection {
+    background-color: var(--color-navy);
+    color: var(--color-paper-soft);
+  }
+}
+
+@layer components {
+  /* Hairline rule — appears as fine architectural division */
+  .rule {
+    height: 1px;
+    background-color: var(--color-line);
+  }
+  .rule-soft {
+    height: 1px;
+    background-color: var(--color-line-soft);
+  }
+
+  /* Technical label — small uppercase mono with a leading hairline mark */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gray);
+  }
+
+  /* Margin annotation — small italic serif used in feature lists */
+  .annotation {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--color-ink-soft);
+    line-height: 1.4;
+  }
+
+  /* Primary CTA — sharp, confident, no rounding to fit editorial direction */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--color-ink);
+    color: var(--color-paper-soft);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    border: 1px solid var(--color-ink);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-navy);
+    border-color: var(--color-navy);
+    transform: translateY(-1px);
+  }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.5rem;
+    background-color: transparent;
+    color: var(--color-ink);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border: 1px solid var(--color-ink);
+    transition: all 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-ink);
+    color: var(--color-paper-soft);
+  }
+
+  /* Drop cap for lead paragraphs in long-form pages */
+  .drop-cap::first-letter {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    line-height: 0.85;
+    float: left;
+    margin: 0.3rem 0.5rem -0.2rem 0;
+    color: var(--color-navy);
+    font-style: italic;
+  }
+
+  /* Container with editorial margins */
+  .container-editorial {
+    max-width: 88rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-editorial {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  /* Editorial grid with column-rule backdrop — subtle */
+  .grid-architectural {
+    background-image:
+      linear-gradient(to right, transparent 0, transparent calc(8.333% - 0.5px), var(--color-line-soft) calc(8.333% - 0.5px), var(--color-line-soft) calc(8.333% + 0.5px), transparent calc(8.333% + 0.5px));
+    background-size: 100% 100%;
+  }
+
+  /* Reveal animation — staggered fade-up on first paint */
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .reveal {
+    opacity: 0;
+    animation: reveal 800ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  .reveal-1 { animation-delay: 100ms; }
+  .reveal-2 { animation-delay: 220ms; }
+  .reveal-3 { animation-delay: 340ms; }
+  .reveal-4 { animation-delay: 460ms; }
+  .reveal-5 { animation-delay: 580ms; }
+  .reveal-6 { animation-delay: 700ms; }
+
+  /* Subtle marquee for trust bar */
+  .marquee-track {
+    display: flex;
+    animation: marquee 60s linear infinite;
+    will-change: transform;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Phone frame mockup */
+  .phone-frame {
+    position: relative;
+    background: linear-gradient(135deg, #1a1d22 0%, #0d1014 100%);
+    padding: 12px;
+    border-radius: 44px;
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.08),
+      0 30px 60px -20px rgba(15, 58, 96, 0.35),
+      0 18px 36px -18px rgba(0, 0, 0, 0.25);
+  }
+  .phone-frame::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 26px;
+    background: #0a0c0f;
+    border-radius: 18px;
+    z-index: 2;
+  }
+  .phone-frame img {
+    border-radius: 32px;
+    display: block;
+    width: 100%;
+  }
+
+  /* For pages that focus on long-form text (privacy, terms) */
+  .prose-editorial {
+    max-width: 42rem;
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+  }
+  .prose-editorial h2 {
+    font-family: var(--font-serif);
+    font-size: 1.65rem;
+    font-weight: 400;
+    color: var(--color-ink);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  .prose-editorial h3 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-editorial p { margin-bottom: 1rem; }
+  .prose-editorial ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+  .prose-editorial ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .prose-editorial ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-rust);
+  }
+  .prose-editorial a {
+    color: var(--color-navy);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .prose-editorial a:hover { color: var(--color-rust); }
+  .prose-editorial strong { color: var(--color-ink); font-weight: 600; }
+
+  /* Numbered chapter marker */
+  .chapter-mark {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--color-rust);
+    letter-spacing: 0.1em;
+  }
+}

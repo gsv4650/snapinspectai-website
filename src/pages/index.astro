@@ -1,0 +1,389 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="SnapInspect AI — AI-powered inspection reports for licensed home inspectors"
+  description="Walk the property. Dictate findings. AI writes the report. Deliver a branded, client-ready PDF before you've left the driveway. $99.99/month with a 14-day free trial."
+>
+  <!-- ─────────────────────────────────────────── HERO ─── -->
+  <section class="relative overflow-hidden border-b border-[var(--color-line-soft)]">
+    <!-- Subtle architectural grid backdrop -->
+    <div class="absolute inset-0 pointer-events-none opacity-[0.04]"
+      style="background-image: linear-gradient(to right, var(--color-ink) 1px, transparent 1px), linear-gradient(to bottom, var(--color-ink) 1px, transparent 1px); background-size: 80px 80px;">
+    </div>
+
+    <div class="container-editorial relative pt-16 pb-24 md:pt-24 md:pb-32">
+      <!-- Masthead row -->
+      <div class="flex items-center justify-between mb-16 md:mb-24 reveal reveal-1">
+        <div class="flex items-center gap-6">
+          <span class="label">Vol. I — № 001</span>
+          <span class="hidden md:inline label">Field Edition</span>
+        </div>
+        <span class="label">Updated 2026</span>
+      </div>
+
+      <div class="grid grid-cols-12 gap-x-8 gap-y-12">
+        <!-- Lead headline -->
+        <div class="col-span-12 lg:col-span-8">
+          <p class="label mb-8 reveal reveal-1">For licensed home inspectors</p>
+          <h1 class="font-display text-[clamp(3.5rem,9vw,8rem)] tracking-tight reveal reveal-2">
+            Inspect by day.<br/>
+            <em class="text-[var(--color-rust)] not-italic relative">
+              <span class="font-display italic">Skip the paperwork</span>
+            </em><br/>
+            by night.
+          </h1>
+        </div>
+
+        <!-- Right column — short manifesto -->
+        <aside class="col-span-12 lg:col-span-3 lg:col-start-10 lg:pl-6 lg:border-l lg:border-[var(--color-line)] reveal reveal-3">
+          <p class="label mb-4">№ 001 / The Premise</p>
+          <p class="annotation">
+            Field notes are messy. Reports must be polished. There are not enough hours between the two. SnapInspect closes the gap with a phone, your voice, and a careful AI.
+          </p>
+        </aside>
+      </div>
+
+      <!-- Subhead + CTAs -->
+      <div class="mt-16 grid grid-cols-12 gap-8 items-end reveal reveal-4">
+        <p class="col-span-12 md:col-span-7 text-xl md:text-2xl text-[var(--color-ink-soft)] leading-snug max-w-2xl">
+          Dictate findings as you walk the property. Our AI turns rough notes into contractor-grade language, generates a homeowner-friendly summary, and produces a branded PDF. Before you reach the next address.
+        </p>
+        <div class="col-span-12 md:col-span-5 flex flex-col sm:flex-row gap-3 md:justify-end">
+          <a href="https://apps.apple.com" class="btn-primary">
+            <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor" aria-hidden="true">
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.033 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+            </svg>
+            Download on the App Store
+          </a>
+          <a href="/pricing" class="btn-secondary">
+            See pricing
+            <svg viewBox="0 0 16 16" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone gallery — large editorial spread -->
+      <div class="relative mt-24 md:mt-32 reveal reveal-5">
+        <div class="grid grid-cols-12 gap-6 items-end">
+          <!-- Caption / left column -->
+          <div class="col-span-12 md:col-span-3 mb-8 md:mb-16">
+            <p class="chapter-mark mb-4">01 / FIELD</p>
+            <p class="font-display text-3xl mb-3 leading-tight">A clipboard you can speak to.</p>
+            <p class="text-sm text-[var(--color-gray)]">Twenty-three categories. Voice dictation. A seventy-template comment library. Severity colored in plain green-yellow-red.</p>
+          </div>
+
+          <!-- Three phones in editorial stagger -->
+          <div class="col-span-12 md:col-span-9 flex justify-center gap-4 md:gap-8">
+            <div class="hidden sm:block w-1/4 md:w-1/5 transform translate-y-12">
+              <div class="phone-frame">
+                <img src="/screenshots/1-dashboard.png" alt="SnapInspect dashboard" loading="lazy" />
+              </div>
+            </div>
+            <div class="w-1/2 md:w-1/3 transform">
+              <div class="phone-frame">
+                <img src="/screenshots/2-inspection.png" alt="Inspection categories with progress" loading="lazy" />
+              </div>
+            </div>
+            <div class="hidden sm:block w-1/4 md:w-1/5 transform translate-y-12">
+              <div class="phone-frame">
+                <img src="/screenshots/5-pdf-report.png" alt="Generated PDF report" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── THREE-PILLAR ─── -->
+  <section class="border-b border-[var(--color-line-soft)] py-24 md:py-32">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8 mb-20">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark">№ 002 — The Method</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 md:col-start-5">
+          <h2 class="font-display text-5xl md:text-7xl leading-[0.95]">
+            One product.<br/>
+            Three honest <em class="text-[var(--color-navy)]">acts</em>.
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-x-12">
+        <!-- Act 01 -->
+        <article class="border-t border-[var(--color-ink)] pt-6">
+          <p class="chapter-mark mb-6">01 / CAPTURE</p>
+          <h3 class="font-display text-3xl leading-tight mb-4">
+            Walk the house. Talk into your phone.
+          </h3>
+          <p class="text-[15px] text-[var(--color-ink-soft)] leading-relaxed">
+            Twenty-three inspection categories, organized the way you actually move through a property. Tap to dictate. Add a photo. Tag severity from Information through Safety Hazard. Keep moving.
+          </p>
+          <div class="mt-6 flex flex-col gap-2">
+            <p class="annotation">23 categories · voice-to-text · severity tagging</p>
+          </div>
+        </article>
+
+        <!-- Act 02 -->
+        <article class="border-t border-[var(--color-rust)] pt-6">
+          <p class="chapter-mark mb-6">02 / POLISH</p>
+          <h3 class="font-display text-3xl leading-tight mb-4">
+            Field notes become contractor-grade language.
+          </h3>
+          <p class="text-[15px] text-[var(--color-ink-soft)] leading-relaxed">
+            "Siding's a bit off the track" becomes
+            <em class="text-[var(--color-navy)]">"Evidence of displaced siding observed at the exterior. Recommend evaluation by a qualified general contractor."</em>
+            Conservative tone. Your voice. No invention.
+          </p>
+          <div class="mt-6 flex flex-col gap-2">
+            <p class="annotation">AI Polish · client summary · re-polish freely</p>
+          </div>
+        </article>
+
+        <!-- Act 03 -->
+        <article class="border-t border-[var(--color-navy)] pt-6">
+          <p class="chapter-mark mb-6">03 / DELIVER</p>
+          <h3 class="font-display text-3xl leading-tight mb-4">
+            A branded PDF. Before you leave the driveway.
+          </h3>
+          <p class="text-[15px] text-[var(--color-ink-soft)] leading-relaxed">
+            Your logo. Your license. Your signature. A homeowner-friendly green-yellow-red summary up front, detailed findings by category behind it. Share to Mail, Messages, or Files.
+          </p>
+          <div class="mt-6 flex flex-col gap-2">
+            <p class="annotation">PDF generation · branded reports · share sheet</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── DEEP-DIVE :: AI POLISH ─── -->
+  <section class="py-24 md:py-32 border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8 items-center">
+        <!-- Left: explanation -->
+        <div class="col-span-12 md:col-span-6">
+          <p class="chapter-mark mb-6">02 / POLISH — A CLOSER LOOK</p>
+          <h2 class="font-display text-5xl md:text-6xl leading-[0.95] mb-8">
+            Conservative language.<br/>
+            <em class="text-[var(--color-rust)]">No invented facts.</em>
+          </h2>
+          <p class="text-lg text-[var(--color-ink-soft)] leading-relaxed mb-6 max-w-xl">
+            The AI is trained on the language inspectors use — and where they're conservative. When a finding is ambiguous, it recommends contractor referral. It will never invent a measurement, a defect, or a recommendation.
+          </p>
+          <p class="text-lg text-[var(--color-ink-soft)] leading-relaxed max-w-xl">
+            You decide what stays in the report. You re-polish until it reads right.
+          </p>
+
+          <!-- Before/After example -->
+          <div class="mt-12 border-t border-b border-[var(--color-line)]">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="p-6 border-b md:border-b-0 md:border-r border-[var(--color-line)]">
+                <p class="label mb-3">Your note</p>
+                <p class="font-display text-xl italic text-[var(--color-ink-soft)] leading-snug">
+                  "Siding is a bit off the track"
+                </p>
+              </div>
+              <div class="p-6 bg-[var(--color-paper-soft)]">
+                <p class="label mb-3 text-[var(--color-rust)]">AI Polish</p>
+                <p class="text-[15px] text-[var(--color-ink)] leading-relaxed">
+                  Evidence of siding that is displaced or misaligned from its track was observed at the exterior. This condition may allow moisture intrusion and should be addressed to prevent potential worsening.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: phone preview -->
+        <div class="col-span-12 md:col-span-5 md:col-start-8">
+          <div class="phone-frame max-w-sm mx-auto">
+            <img src="/screenshots/4-finding-after-ai.png" alt="AI-polished finding in the SnapInspect app" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── DEEP-DIVE :: CLIENT SUMMARY ─── -->
+  <section class="py-24 md:py-32 border-b border-[var(--color-line-soft)] bg-[var(--color-paper-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8 items-center">
+        <!-- Left: phone -->
+        <div class="col-span-12 md:col-span-5 order-2 md:order-1">
+          <div class="phone-frame max-w-sm mx-auto">
+            <img src="/screenshots/5-pdf-report.png" alt="Generated PDF report with inspection summary" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Right: explanation -->
+        <div class="col-span-12 md:col-span-6 md:col-start-7 order-1 md:order-2">
+          <p class="chapter-mark mb-6">03 / DELIVER — THE CLIENT PAGE</p>
+          <h2 class="font-display text-5xl md:text-6xl leading-[0.95] mb-8">
+            What the buyer<br/>
+            <em class="text-[var(--color-navy)]">actually reads.</em>
+          </h2>
+          <p class="text-lg text-[var(--color-ink-soft)] leading-relaxed mb-8 max-w-xl">
+            Every report opens with an AI-written client summary. Findings are grouped by priority — green for monitor, yellow for maintenance, red for major. Each item explains what was found, why it matters, and who to call.
+          </p>
+          <ul class="space-y-3 text-[15px] text-[var(--color-ink)]">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 w-2 h-2 bg-[#21a663] flex-shrink-0"></span>
+              <span><span class="font-medium">Green — Monitor.</span> What's working. What to watch over time.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 w-2 h-2 bg-[#e9a83a] flex-shrink-0"></span>
+              <span><span class="font-medium">Yellow — Maintain.</span> Routine attention; no immediate concern.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 w-2 h-2 bg-[#c43c2f] flex-shrink-0"></span>
+              <span><span class="font-medium">Red — Address.</span> Findings that warrant a specialist before close.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── FEATURE GRID ─── -->
+  <section class="py-24 md:py-32 border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8 mb-20">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark">№ 003 — The Ledger</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 md:col-start-5">
+          <h2 class="font-display text-5xl md:text-7xl leading-[0.95]">
+            Built around how you<br/>
+            <em>actually work.</em>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--color-line-soft)] border border-[var(--color-line-soft)]">
+        {[
+          { num: "01", title: "Voice dictation", body: "Hands-free notes while you're up a ladder or under a crawlspace. SFSpeech handles transcription locally when possible." },
+          { num: "02", title: "Photo capture", body: "Snap, annotate, file to a finding or category. Photos stay on-device — never uploaded to a server." },
+          { num: "03", title: "Comment library", body: "70+ pre-written conservative templates seeded on first launch. Save your own as you write." },
+          { num: "04", title: "Severity tagging", body: "Information, Minor, Moderate, Major, Safety Hazard. Color-coded throughout the app and report." },
+          { num: "05", title: "Custom branding", body: "Add your company logo, license number, signature, and brand color. Every report carries your identity." },
+          { num: "06", title: "Offline-friendly", body: "Inspect in basements, attics, anywhere. AI calls retry automatically when you're back online." },
+          { num: "07", title: "Progress tracking", body: "Each category shows Inspected, Not Present, Not Inspected. Always know what's left to walk." },
+          { num: "08", title: "Quick photo capture", body: "A camera button anywhere in the inspection. File the photo to a category afterward." },
+          { num: "09", title: "Scope of work page", body: "Every PDF includes the scope of inspection — Inspected items, Not Present, Not Inspected, and your liability statement." },
+        ].map((f) => (
+          <article class="bg-[var(--color-paper)] p-8 md:p-10">
+            <p class="chapter-mark mb-4">{f.num}</p>
+            <h3 class="font-display text-2xl mb-3 leading-tight">{f.title}</h3>
+            <p class="text-[14px] text-[var(--color-ink-soft)] leading-relaxed">{f.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── PRIVACY POSTURE ─── -->
+  <section class="py-24 md:py-28 bg-[var(--color-navy-deep)] text-[var(--color-paper-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8 items-center">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark" style="color:#D38958">№ 004 — Privacy</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 md:col-start-5">
+          <h2 class="font-display text-4xl md:text-5xl leading-[1] mb-8">
+            Your inspections do not leave the phone.
+          </h2>
+          <p class="text-lg text-[#D8D2C3] leading-relaxed max-w-2xl mb-8">
+            Inspection records, photos, signatures, and client details live in the iOS app sandbox on your device. The only thing transmitted is the short text of a finding — sent through our backend proxy to the AI provider, then returned. No analytics. No tracking. No accounts to manage.
+          </p>
+          <a href="/privacy" class="inline-flex items-center gap-2 text-[#D8D2C3] hover:text-[#F4EFE3] transition-colors text-sm font-medium border-b border-[#D38958] pb-1">
+            Read the full privacy policy
+            <svg viewBox="0 0 16 16" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── PRICING TEASER ─── -->
+  <section class="py-24 md:py-32 border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-5">
+          <p class="chapter-mark mb-6">№ 005 — The Terms</p>
+          <h2 class="font-display text-6xl md:text-7xl leading-[0.95] mb-10">
+            One plan.<br/>
+            <em class="text-[var(--color-rust)]">Fourteen days</em><br/>
+            free.
+          </h2>
+          <p class="text-lg text-[var(--color-ink-soft)] leading-relaxed mb-8 max-w-md">
+            SnapInspect Pro unlocks the full workflow. Try it for two weeks. Cancel any time in the App Store.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://apps.apple.com" class="btn-primary">Start your trial</a>
+            <a href="/pricing" class="btn-secondary">See what's included</a>
+          </div>
+        </div>
+
+        <div class="col-span-12 md:col-span-6 md:col-start-7">
+          <div class="border border-[var(--color-ink)] bg-[var(--color-paper)] p-10 md:p-12">
+            <div class="flex items-baseline justify-between mb-2">
+              <p class="font-display text-2xl">SnapInspect Pro</p>
+              <p class="chapter-mark">MONTHLY</p>
+            </div>
+            <p class="text-sm text-[var(--color-gray)] mb-8">For the working inspector.</p>
+
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="font-display text-7xl leading-none">$99</span>
+              <span class="font-display text-3xl text-[var(--color-gray)]">.99</span>
+              <span class="text-sm text-[var(--color-gray)] ml-2">/ month</span>
+            </div>
+            <p class="label">After your 14-day free trial</p>
+
+            <div class="my-10 rule"></div>
+
+            <ul class="space-y-3 text-[15px]">
+              {[
+                "AI Polish on every finding",
+                "AI-generated client summary",
+                "Professional branded PDF reports",
+                "Unlimited inspections",
+                "All 23 inspection categories",
+                "Voice dictation",
+                "Comment library (70+ templates)",
+                "Photo capture and annotation",
+              ].map((item) => (
+                <li class="flex items-start gap-3">
+                  <svg viewBox="0 0 16 16" class="w-4 h-4 mt-1 flex-shrink-0 text-[var(--color-rust)]" fill="none" stroke="currentColor" stroke-width="1.75">
+                    <path d="M3 8.5l3.5 3.5L13 4.5"/>
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── FINAL CTA ─── -->
+  <section class="py-32 md:py-40">
+    <div class="container-editorial text-center">
+      <p class="chapter-mark mb-8">— FIN —</p>
+      <h2 class="font-display text-6xl md:text-8xl leading-[0.95] max-w-5xl mx-auto mb-12">
+        The fieldwork is yours.<br/>
+        <em class="text-[var(--color-navy)]">The reports write themselves.</em>
+      </h2>
+      <a href="https://apps.apple.com" class="btn-primary text-base px-8 py-4">
+        <svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.033 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/></svg>
+        Download on the App Store
+      </a>
+      <p class="mt-8 label">14-day free trial · $99.99/month after · cancel anytime</p>
+    </div>
+  </section>
+</BaseLayout>

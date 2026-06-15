@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Support — SnapInspect AI"
+  description="Contact, FAQ, subscription help, restoring purchases, and answers about AI features for SnapInspect AI."
+  ogPath="/support"
+>
+  <!-- ─────────────────────────────────────────── HERO ─── -->
+  <section class="border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial pt-16 pb-20 md:pt-24 md:pb-24">
+      <div class="flex items-center justify-between mb-16 reveal reveal-1">
+        <span class="label">№ 006 — Support</span>
+        <span class="label">Response within 1–2 business days</span>
+      </div>
+
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">SECTION</p>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <h1 class="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.95] reveal reveal-2">
+            We answer<br/>
+            <em class="text-[var(--color-navy)]">our own emails.</em>
+          </h1>
+          <p class="mt-10 text-xl text-[var(--color-ink-soft)] leading-relaxed max-w-2xl reveal reveal-3">
+            SnapInspect is built and supported by Gregory Voetsch. Write directly. No tickets, no escalations, no chatbot.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── CONTACT ─── -->
+  <section class="py-20 border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark">№ 007 — Contact</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 md:col-start-5">
+          <p class="label mb-4">DIRECT EMAIL</p>
+          <a href="mailto:gregg.voetsch@gmail.com" class="font-display text-4xl md:text-5xl italic text-[var(--color-navy)] hover:text-[var(--color-rust)] transition-colors">
+            gregg.voetsch@gmail.com
+          </a>
+          <p class="mt-6 text-[15px] text-[var(--color-ink-soft)] max-w-xl">
+            Bug reports, feature requests, billing questions, and general feedback all welcome. Replies typically come within 1–2 business days.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── FAQ ─── -->
+  <section class="py-24 md:py-32 border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8 mb-16">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark">№ 008 — Frequently Asked</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 md:col-start-5">
+          <h2 class="font-display text-5xl md:text-6xl leading-[0.95]">
+            The common questions.
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-10 md:col-start-2">
+          <div class="space-y-8">
+            {[
+              {
+                num: "01",
+                q: "Will my inspection data sync between devices?",
+                a: "Not in v1.0. Inspections are stored on the iPhone where they were created. iCloud Backup (if enabled in iOS Settings) will include the data in your nightly backup so it survives a phone replacement. Multi-device sync is the top priority for v1.1.",
+              },
+              {
+                num: "02",
+                q: "What happens if I lose my phone?",
+                a: "If you have iCloud Backup enabled, restore your new phone from backup and your inspections will return. Without iCloud Backup, the data is gone. Treat the app like a physical clipboard: back up regularly until v1.1 ships cloud sync.",
+              },
+              {
+                num: "03",
+                q: "How does AI Polish work? Will it invent things?",
+                a: "Your finding text is sent through our backend proxy to Anthropic's Claude. The AI is prompted to use conservative inspector language and never to invent measurements, defects, or recommendations. When a note is too brief to be defensible, the AI flags it and asks you to add detail.",
+              },
+              {
+                num: "04",
+                q: "Do I need to bring my own API key?",
+                a: "No. The subscription covers all AI usage. You never see, paste, or manage an API key.",
+              },
+              {
+                num: "05",
+                q: "Do photos go to the cloud?",
+                a: "No. Photos live in the iOS app sandbox on your device. They are only included when you share the PDF report (via Mail, Messages, or any iOS share target).",
+              },
+              {
+                num: "06",
+                q: "How do I cancel the subscription?",
+                a: "Open the iPhone Settings app → tap your name → Subscriptions → SnapInspect AI → Cancel Subscription. You retain access through the end of the period you've already paid for.",
+              },
+              {
+                num: "07",
+                q: "How do I restore my subscription on a new device?",
+                a: "Sign in with the same Apple ID you used to subscribe. Open the app, go to Settings, tap Restore Purchases. The app will detect your active subscription and unlock the Pro features.",
+              },
+              {
+                num: "08",
+                q: "Is there an iPad version?",
+                a: "Not yet. v1.0 is iPhone-only by design — built for inspectors walking properties. An iPad version is on the roadmap once we have signal that inspectors want the bigger canvas.",
+              },
+            ].map((item) => (
+              <details class="group border-t border-[var(--color-line)] pt-6">
+                <summary class="cursor-pointer flex items-start gap-6 list-none">
+                  <span class="chapter-mark flex-shrink-0">{item.num}</span>
+                  <div class="flex-1">
+                    <p class="font-display text-2xl md:text-3xl leading-tight pr-8 group-open:text-[var(--color-rust)] transition-colors">
+                      {item.q}
+                    </p>
+                  </div>
+                  <span class="font-display text-3xl text-[var(--color-gray)] group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="mt-4 pl-12 pr-12 pb-2">
+                  <p class="text-[15px] text-[var(--color-ink-soft)] leading-relaxed max-w-2xl">
+                    {item.a}
+                  </p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── FOOTER CTA ─── -->
+  <section class="py-24">
+    <div class="container-editorial text-center">
+      <p class="chapter-mark mb-8">— ANYTHING ELSE? —</p>
+      <h2 class="font-display text-4xl md:text-6xl leading-[0.95] max-w-3xl mx-auto mb-10">
+        Write to <em class="text-[var(--color-navy)]">gregg.voetsch@gmail.com</em>.<br/>
+        Real reply.
+      </h2>
+      <a href="mailto:gregg.voetsch@gmail.com" class="btn-primary text-base px-8 py-4">
+        Send an email
+      </a>
+    </div>
+  </section>
+</BaseLayout>

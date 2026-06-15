@@ -1,0 +1,52 @@
+---
+const year = 2026;
+---
+
+<footer class="mt-32 border-t border-[var(--color-line-soft)] bg-[var(--color-paper-soft)]">
+  <div class="container-editorial py-16">
+    <div class="grid grid-cols-2 md:grid-cols-12 gap-y-10 gap-x-8">
+      <!-- Brand block -->
+      <div class="col-span-2 md:col-span-5">
+        <div class="flex items-center gap-3">
+          <span class="font-display text-3xl italic leading-none">SnapInspect</span>
+          <span class="label text-[10px] tracking-[0.18em] mt-1">AI</span>
+        </div>
+        <p class="mt-5 text-[15px] text-[var(--color-gray)] leading-relaxed max-w-sm">
+          The AI-powered field companion for licensed home inspectors. Capture the inspection; deliver the report before you've left the driveway.
+        </p>
+        <p class="mt-8 label">Built in the United States</p>
+      </div>
+
+      <!-- Nav columns -->
+      <div class="col-span-1 md:col-span-2 md:col-start-7">
+        <p class="label mb-4">Product</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/features" class="text-[var(--color-ink-soft)] hover:text-[var(--color-rust)]">Features</a></li>
+          <li><a href="/pricing" class="text-[var(--color-ink-soft)] hover:text-[var(--color-rust)]">Pricing</a></li>
+          <li><a href="https://apps.apple.com" class="text-[var(--color-ink-soft)] hover:text-[var(--color-rust)]">App Store</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-1 md:col-span-2">
+        <p class="label mb-4">Company</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/support" class="text-[var(--color-ink-soft)] hover:text-[var(--color-rust)]">Support</a></li>
+          <li><a href="mailto:gregg.voetsch@gmail.com" class="text-[var(--color-ink-soft)] hover:text-[var(--color-rust)]">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-2 md:col-span-3">
+        <p class="label mb-4">Legal</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/privacy" class="text-[var(--color-ink-soft)] hover:text-[var(--color-rust)]">Privacy Policy</a></li>
+          <li><a href="/terms" class="text-[var(--color-ink-soft)] hover:text-[var(--color-rust)]">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-6 border-t border-[var(--color-line-soft)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <p class="label">© {year} Gregory Voetsch. All rights reserved.</p>
+      <p class="label">v1.0 — released {year}</p>
+    </div>
+  </div>
+</footer>

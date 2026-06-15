@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Privacy Policy — SnapInspect AI"
+  description="How SnapInspect AI handles your data. Inspection records stay on your device. We collect as little as possible."
+  ogPath="/privacy"
+>
+  <section class="border-b border-[var(--color-line-soft)]">
+    <div class="container-editorial pt-16 pb-12 md:pt-24 md:pb-16">
+      <div class="flex items-center justify-between mb-12">
+        <span class="label">№ 007 — Privacy Policy</span>
+        <span class="label">Effective June 14, 2026</span>
+      </div>
+
+      <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">SECTION</p>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <h1 class="font-display text-[clamp(3rem,7vw,6rem)] leading-[0.95]">
+            Privacy<br/>
+            <em class="text-[var(--color-navy)]">Policy.</em>
+          </h1>
+          <p class="mt-8 text-lg text-[var(--color-ink-soft)] max-w-2xl">
+            How SnapInspect AI handles your data. Your privacy matters and we collect as little as possible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-editorial">
+      <div class="grid grid-cols-12 gap-8">
+        <!-- Margin TOC -->
+        <aside class="col-span-12 md:col-span-2 hidden md:block">
+          <p class="label mb-4 sticky top-24">CONTENTS</p>
+          <ul class="text-xs space-y-2 sticky top-32 text-[var(--color-gray)]">
+            <li><a href="#device" class="hover:text-[var(--color-rust)]">Data on Device</a></li>
+            <li><a href="#third-party" class="hover:text-[var(--color-rust)]">Third Parties</a></li>
+            <li><a href="#not-collected" class="hover:text-[var(--color-rust)]">Not Collected</a></li>
+            <li><a href="#permissions" class="hover:text-[var(--color-rust)]">Permissions</a></li>
+            <li><a href="#children" class="hover:text-[var(--color-rust)]">Children's Privacy</a></li>
+            <li><a href="#retention" class="hover:text-[var(--color-rust)]">Retention</a></li>
+            <li><a href="#contact" class="hover:text-[var(--color-rust)]">Contact</a></li>
+          </ul>
+        </aside>
+
+        <article class="col-span-12 md:col-span-9 md:col-start-3">
+          <p class="drop-cap text-lg leading-relaxed text-[var(--color-ink-soft)] mb-10">
+            This Privacy Policy explains how SnapInspect AI ("the app," "we," "us") handles your data. We are an indie product. We do not run analytics, we do not sell data, and we keep your inspection records on your device. Read on for the details.
+          </p>
+
+          <div class="prose-editorial">
+            <h2 id="device">Data Stored on Your Device</h2>
+            <p>The following stays on your iPhone and is never sent to us or any third party:</p>
+            <ul>
+              <li>Inspection records, findings, notes, and severity ratings</li>
+              <li>Photos you take or import for inspections</li>
+              <li>Inspector profile (name, license number, contact info, signature, company branding)</li>
+              <li>Comment library entries you save</li>
+            </ul>
+            <p>This data is stored in your device's local database and the app's sandboxed file storage. It is included in your iCloud or iTunes device backups according to your iOS settings.</p>
+
+            <h2 id="third-party">Data Sent to Third Parties</h2>
+
+            <h3>Anthropic (AI Provider)</h3>
+            <p>When you use the AI Polish, AI Summary, or AI Client Summary features, the relevant inspection note text (and the category it belongs to) is sent through our backend proxy to Anthropic's Claude API for processing. Photos are never sent. Anthropic does not retain inputs for training and processes requests according to <a href="https://www.anthropic.com/privacy">Anthropic's Privacy Policy</a>.</p>
+
+            <h3>Apple (Payments)</h3>
+            <p>Subscription purchases are processed by Apple through the App Store. We never receive your payment information. Apple's privacy practices are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+
+            <h3>RevenueCat (Subscription Management)</h3>
+            <p>We use RevenueCat to verify your subscription status. RevenueCat receives an anonymous device identifier and your subscription receipt from Apple. No personally identifying information is sent. See <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</p>
+
+            <h3>Cloudflare (Backend Proxy)</h3>
+            <p>Our backend proxy runs on Cloudflare Workers and forwards your AI requests to Anthropic. Cloudflare may log request metadata (IP address, timestamp) for abuse prevention.</p>
+
+            <h2 id="not-collected">Data We Do Not Collect</h2>
+            <ul>
+              <li>We do not run analytics or telemetry inside the app</li>
+              <li>We do not track your location</li>
+              <li>We do not share or sell any data with advertisers</li>
+              <li>We do not have an account system — your inspection data is tied to your device, not to a SnapInspect account</li>
+            </ul>
+
+            <h2 id="permissions">Permissions Used</h2>
+            <ul>
+              <li><strong>Camera</strong> — only when you take a photo for an inspection</li>
+              <li><strong>Microphone</strong> — only when you tap the dictation button to dictate notes</li>
+              <li><strong>Speech Recognition</strong> — to transcribe your dictation locally on-device when possible</li>
+              <li><strong>Photo Library</strong> — only when you choose a photo to import to an inspection</li>
+            </ul>
+
+            <h2 id="children">Children's Privacy</h2>
+            <p>SnapInspect AI is a professional tool for adult home inspectors. It is not directed to children under 13 and we do not knowingly collect any data from children.</p>
+
+            <h2 id="retention">Data Retention and Deletion</h2>
+            <p>Because your data lives on your device, you control retention by managing it within the app. You can delete inspections, findings, or photos at any time. Uninstalling the app removes all locally stored data (subject to your iCloud/iTunes backup settings).</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. When we do, we will update the "Effective date" above. Significant changes will be highlighted in the app.</p>
+
+            <h2 id="contact">Contact</h2>
+            <p>Questions or concerns? Email <a href="mailto:gregg.voetsch@gmail.com">gregg.voetsch@gmail.com</a>.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
